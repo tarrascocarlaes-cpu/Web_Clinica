@@ -1,0 +1,25 @@
+# === Dependencias ===
+/node_modules
+
+# === Build / Producción ===
+/build
+/dist
+
+# Si se usa Next.js
+/.next/
+/out/
+
+# === Variables de Entorno ===
+# Para mantener seguars a las API KEYS
+.env
+.env.local
+.env.*.local
+
+# === Cache y Logs ===
+# Archivos de cache de herramientas comunes en React
+.eslintcache
+.stylelintcache
+.npm
+/coverage
+npm-debug.log*
+yarn-debug.log*
