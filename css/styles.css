@@ -22,6 +22,7 @@
     border: none;
     cursor: pointer;
     transition: all 400ms ease;
+    text-decoration: none;
 }
 
 #btn_iniciar:hover{
