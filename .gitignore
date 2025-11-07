@@ -4,6 +4,7 @@
 # === Build / Producción ===
 /build
 /dist
+/js/temp
 
 # Si se usa Next.js
 /.next/
