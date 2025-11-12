@@ -5,6 +5,7 @@
 /build
 /dist
 /js/temp
+/.vscode
 
 # Si se usa Next.js
 /.next/
