@@ -30,28 +30,12 @@
     transform: translateY(-3%);
 }
 
-#btn_registro{
-    color: #fff;
-    background-color: #029d56;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: all 400ms ease;
-}
-
-#btn_registro:hover{
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%);
-}
-
 nav{
     max-width: 100%;
     margin: auto;
     background-color: #fff;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     z-index: 1000;
 }
 
@@ -94,19 +78,19 @@ nav{
 
 #slogan{
     width: 100%;
-    margin-top: 30px;
+    /*se elimina el margen en la parte de arriba*/
     background-color: #263193;
     color: #fff;
     text-align: center;
-    padding: 30px
+    padding: 20px;
 }
 
 /*CARRUSEL DE IMAGENES*/
 
 .slider-box{
-    width: 1280px;
+    width: 1280px; /*Cambio de la resolución del ancho del contenedor*/
     height: auto;
-    margin: 0px auto 0;    
+    margin: 20px auto;    
     overflow: hidden;
 }
 
@@ -126,32 +110,40 @@ nav{
 .texto{
     position: absolute;
     text-align: left;
-    padding: 0 250px;
-    top: 250px;
+    padding: 0 100px;/*Cambio del padding del texto*/
+    top: 150px;/*Cambio de la altura a la que se posiciona el texto*/
     color: black;
 }
 
 .texto p{
-    font-size: 30px;
+    font-size: 25px; /*Cambio en la resolución a 25px*/
 }
 
 .texto h2{
-    font-size: 25px;
+    font-size: 35px;
     margin-bottom: 35px;
+    /*Cambio en las resoluciones*/
 }
 
 .slider-box img{
-    width: 100%;
+    height:485px;/*Cambio de resolución*/
+    width: 100%;/*Cambio de ancho de la imagen*/
 }
 .texto button{
     font-size: 25px;
-    color: #fff;
     background-color: #029d56;
     margin-top: 25px;
     border-radius: 40px;
     border: none;
     padding: 15px 30px;
     cursor: pointer;
+}
+
+/*Se agrega el a a todos los botones*/
+
+.texto button a{
+    text-decoration: none;
+    color: #fff;
 }
 
 @keyframes slide{
@@ -200,9 +192,9 @@ nav{
     justify-content: center; 
     align-items: center;
     text-align: center;
-    margin: 30px 0;
+    margin-bottom: 20px;
     gap: 25px; 
-    padding: 25px;
+    padding: 35px;
     background-color: #eeeeee; /*CAMBIAR EL FONDO*/
 }
 
