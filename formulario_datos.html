@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_form_datos.css">
+    <script src="js/script_form-.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-form">
+        <div class="form-container">
+            <h2 class="titulo">REGISTRO DE DATOS ADICIONALES</h2>
+            <form action="procesar_registro.php" method="post" onsubmit="return validarFormulario()">
+                <h2 class="subtitulo">Datos Personales</h2>
+
+                <label for="nombre" class="">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre/s" minlength="3" maxlength="50"  
+                oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, '');">
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese su apellido/s" minlength="3" maxlength="50"
+                oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, '');">
+
+                <label for="dni">DNI</label>
+                <input type="number" id="dni" name="dni" placeholder="Ingrese su dni">
+
+                <label for="edad">Edad</label>
+                <!--
+                    <input type="radio" id="meses" name="tipoEdad" class="radio">
+                    <label for="meses">Meses</label>
+
+                    <input type="radio" id="años" name="tipoEdad" class="radio">
+                    <label for="anios">Años</label>
+                -->
+
+                <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" min="0" max="100">
+
+                <label for="fecha-naci">Ingrese su fecha de nacimiento</label>
+                <input type="date" id="fecha-naci" name="fecha-naci">
+
+                <label for="genero">Genero</label>
+                <select name="genero" id="genero">
+                    <option value="">Seleccione su genero</option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Femenino</option>
+                </select>
+
+                <label for="pais">País de origen</label>
+                <select name="pais" id="pais">
+                    <option value="">Seleccione su genero</option>
+                    <option value="m">Peru</option>
+                    <option value="f">Argentina</option>
+                    <option value="f">Brasil</option>
+                    <option value="f">Colombia</option>
+                    <option value="f">Chile</option>
+                    <option value="f">Ecuador</option>
+                    <option value="f">Venezuela</option>
+                </select>
+
+                <h2 class="subtitulo">Datos de contacto</h2>
+            
+                <label for="telefono">Número de telefono</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Ingrese su número de telefono">
+
+                <label for="telefono-alt">Número de telefono alternativo</label>
+                <input type="text" id="telefono-alt" name="telefono-alt" placeholder="Ingrese su número de telefono alternativo">
+
+                <label for="direccion">Direccion de domicilio</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Ingrese su direccion domiciliaria">
+            
+                <label for="departamento">Departamento</label>
+                <select name="departamento" id="departamento" onchange="cargar_ciudades()">
+                    <option value="">Seleccione un departamento</option>
+                    <option value="amazonas">Amazonas</option>
+                    <option value="ancash">Áncash</option>
+                    <option value="apurimac">Apurímac</option>
+                    <option value="arequipa">Arequipa</option>
+                    <option value="ayacucho">Ayacucho</option>
+                    <option value="cajamarca">Cajamarca</option>
+                    <option value="cusco">Cusco</option>
+                    <option value="huancavelica">Huancavelica</option>
+                    <option value="huanuco">Huánuco</option>
+                    <option value="ica">Ica</option>
+                    <option value="junin">Junín</option>
+                    <option value="la_libertad">La Libertad</option>
+                    <option value="lambayeque">Lambayeque</option>
+                    <option value="lima">Lima</option>
+                    <option value="loreto">Loreto</option>
+                    <option value="madre_dios">Madre de Dios</option>
+                    <option value="moquegua">Moquegua</option>
+                    <option value="pasco">Pasco</option>
+                    <option value="piura">Piura</option>
+                    <option value="puno">Puno</option>
+                    <option value="san_martin">San Martín</option>
+                    <option value="tacna">Tacna</option>
+                    <option value="tumbes">Tumbes</option>
+                    <option value="ucayali">Ucayali</option>
+                    <option value="callao">Callao</option>
+                </select>
+            
+                <label for="provincia">Provincia</label>
+                <select name="provincia" id="provincia" onchange="return cargar_distritos()">
+                    <option value="">Seleccione su provincia </option>
+                </select>
+            
+                <label for="distrito">Distrito</label>
+                <select name="distrito" id="distrito">
+                    <option value="">Seleccione su distrito</option>
+                </select>
+
+                <h2 class="subtitulo">Contacto de emergencia</h2>
+
+                <label for="nombre-emer">Nombres del contacto de emergencia</label>
+                <input type="text" id="nombre-emer" id="nombre-emer" placeholder="Ingrese los nombres"
+                oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, '');">
+
+                <label for="apellido-emer">Apellidos del contacto de emergencia</label>
+                <input type="text" id="apellido-emer" name="apellido-emer" placeholder="Ingrese los apellidos"
+                oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, '');">
+            
+                <label for="parentesco">Parentesco</label>
+                <select name="parentesco" id="parentesco">
+                    <option value="">Seleccione una opción</option>
+                    <option value="madre">Madre</option>
+                    <option value="padre">Padre</option>
+                    <option value="pareja">Esposo/a</option>
+                    <option value="familiar">Familiar</option>
+                </select>
+
+                <label for="telefono-emer">Número de telefono</label>
+                <input type="text" id="telefono-emer" name="telefono-emer" placeholder="Ingrese el número de telefono">
+
+                <label for="telefono-alt-emer">Número de telefono alternativo</label>
+                <input type="text" id="telefono-alt-emer" name="telefono-alt-emer" placeholder="Ingrese el número de telefono alternativo">
+
+                <h2 class="subtitulo">Información médica</h2>
+
+                <label>Tipo de sangre</label>
+                <select name="tipo-sangre" id="tipo-sangre">
+                    <option value="">Seleccione su tipo de sangre</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label for="alergias">Alergias</label>
+                <textarea name="alergias" id="alergias" rows="6" cols="50" placeholder="Mencione sus alergias, en caso no tener, poner 'Ninguna'"></textarea>
+                
+                <label for="enfermedades-previas">Enfermedades previas o crónicas</label>
+                <textarea name="enfermedades" id="enfermedades" rows="6" cols="50" placeholder="Menciones sus enfermedades previas o crónicas que haya padecido, en caso no haber padecido, poner 'Ninguna'"></textarea>
+                
+                <label for="cirugias-previas">Cirugias previas</label>
+                <textarea name="cirugias-previas" id="cirugias-previas" rows="6" cols="50" placeholder="Mencione las cirugias previas que se le hayan realizado, en caso no haber padecido, poner 'Ninguna'"></textarea>
+
+                <h2 class="subtitulo">Seguro médico</h2>
+
+                <label for="seguro">Cuenta con seguro médico?</label>
+
+                    <input type="radio" name="seguro" value="si" onchange="toogleSeguro()">
+                    <label for="si">Si</label>
+                    <input type="radio" name="seguro" value="no" onchange="toogleSeguro()">
+                    <label for="no">No</label>
+
+                <label for="aseguradora">Nombre de la Aseguradora</label>
+                <input type="text" id="aseguradora" placeholder="Ingrese el nombre de la aseguradora" minlength="4" maxlength="50"
+                oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, '');" disabled>
+
+                <label for="num-poliza">Numero de la poliza de seguro</label>
+                <input type="text" id="poliza" placeholder="Ingrese el numero de la poliza" minlength="6" maxlength="15" disabled><br>
+
+                <input type="checkbox" id="terminos-condiciones" name="terminos-condiciones">
+                <label for="terminos-condiciones" class="terminos">Acepto los <a href="#">terminos y condiciones</a></label><br>
+
+                <input type= "checkbox" id="consentimiento" name="consentimiento">
+                <label for="consentimiento" class="terminos">Doy mi consentimiento para el uso y tratado de los datos personales que he proporcionado</label><br>
+
+                <div class="botones">
+                <input type="submit" value="Registrar">
+                <input type= "reset" value="Limpiar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
