@@ -120,25 +120,25 @@
 }
 
 .nav-actions .btn-primary{
-    background-color: #28a745;
-    color: #fff;
-    border: 2px solid #28a745;
-}
-
-.nav-actions .btn-primary:hover{
-    background-color: #218838;
-    border-color: #218838;
-}
-
-.nav-actions .btn-secondary{
     background-color: transparent;
     border: 2px solid #0077b6;
     color: #0077b6;
 }
 
-.nav-actions .btn-secondary:hover{
+.nav-actions .btn-primary:hover{
     background-color: #0077b6;
     color: #fff;
+}
+
+.nav-actions .btn-secondary{
+    background-color: #28a745;
+    color: #fff;
+    border: 2px solid #28a745;
+}
+
+.nav-actions .btn-secondary:hover{
+    background-color: #176428;
+    border-color: #176428;
 }
 
 .menu-toggle{
@@ -304,6 +304,11 @@
     padding: 15px 30px;
     cursor: pointer;
     font-weight: 600;
+    transition: all 400ms ease;
+}
+
+.texto button:hover{
+    background-color: #176428;
 }
 
 /*Se agrega el a a todos los botones*/
