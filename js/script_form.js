@@ -111,7 +111,9 @@ function validarFormulario(){
         return false;
     }
 
-    return true;
+    window.location.href = "index.html";
+
+    return false;
 }
 
     var amazonas = new Array("Seleccione su ciudad","Bagua","Bongará","Chachapoyas","Condorcanqui","Luya","Rodríguez de Mendoza","Utcubamba");
@@ -294,4 +296,5 @@ function agregarCirugia(){
     let contenedor = document.getElementById("container_Cirugias");
 
     contenedor.insertBefore(item, boton);
+
 }
