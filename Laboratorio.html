@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio - Centenario del Norte</title>
+    <link rel="stylesheet" href="styles_laboratorio.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#">Campañas ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios ▾</a>
+                    <ul class="submenu">
+                        <li><a href="/agendar_cita.html">Agenda tu Cita</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Especialidades ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Staff Médico ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nuestro Blog ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ's ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary"><i class="fa-regular fa-user"></i>&nbsp; Iniciar Sesión</a>
+                <a href="register.html" class="btn btn-secondary"><i class="fa-regular fa-user"></i>&nbsp; Registrarse</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <div class="contenido-laboratorio">
+                <div class="encabezado">
+                    <h2>Laboratorio</h2>
+                    <div class="iconos-accion">
+                        <span class="icono-lab"><i class="fa-solid fa-circle-user"></i></span>
+                        <div class="carrito-contenedor">
+                            <span class="icono-lab carrito"><i class="fa-solid fa-cart-plus"></i></span>
+                            <span id="contador-carrito" class="contador-carrito">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="busqueda">
+                    <span class="icono-lab"><i class="fa-solid fa-magnifying-glass"></i><input class="texto" type="text" placeholder="Busca por tipo de análisis"></span>
+                </div>
+            </div>
+
+            <div class="carrusel">
+                <h3>Algunas opciones son:</h3>
+                <button class="boton-carrusel izquierda" aria-label="Anterior">&#10094;</button>
+                <div class="lista-analisis">
+                    <article class="cuadro">
+                        <img src="img/sangre.jpg" alt="Análisis de Sangre">
+                        <h4 class="titulo">Análisis de Sangre</h4>
+                        <p class="descripcion">Este análisis básico permite detectar indicadores clave de funciones orgánicas, niveles de nutrientes e posibles infecciones.</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 40.00 </p>
+                            <p><b>Preparación:</b> Requiere un ayuno de 8 a 12 horas (solo agua permitida). </p>
+                            <p><b>Resultados:</b> Dentro de 24 - 48 horas.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/Perfil-Lipidico.png" alt="Perfil Lipídico">
+                        <h4 class="titulo">Perfil Lipídico</h4>
+                        <p class="descripcion">Mide los niveles de grasas en la sangre, incluyendo colesterol total, LDL, HDL y triglicéridos. Escrucial para evaluar el riesgo de enfermedad cardiovascular</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 50.00 </p>
+                            <p><b>Preparación:</b>Requiere estrictamente un ayuno de 9 a 12 horas antes de la toma de muestra para obtener resultados precisos de los triglicéridos. </p>
+                            <p><b>Resultados:</b> Dentro de 24 - 48 horas.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/biopsia.jpg" alt="Biopsia">
+                        <h4 class="titulo">Biopsia</h4>
+                        <p class="descripcion">Es la extracción de una pequeña muestra de tejido para su análisis microscópico. Es la más precisa para confirmar o descartar enfermedades como el cáncer.</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 300.00 </p>
+                            <p><b>Preparación:</b> Depende del tipo de procedimiento.</p>
+                            <p><b>Resultados:</b>3 a 7 días hábiles (puede variar según la complejidad del análisis histopatológico).</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/glucosa.webp" alt="Glucosa">
+                        <h4 class="titulo">Glucosa</h4>
+                        <p class="descripcion">Mide la cantidad de azúcar (glucosa) presente en la sangre. Es la prueba estándar para el diagnóstico y seguimiento de la diabetes.</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 30.00 </p>
+                            <p><b>Preparación:</b>Se requiere un ayuno estricto de 8 a 10 horas. Solo se permite la ingesta de agua.</p>
+                            <p><b>Valores:</b>Normal: Menos de 100 mg/dL; Prediabetes: 100 mg/dL a 125 mg/dL; Diabetes: 126 mg/dL o superior.</p>
+                            <p><b>Resultados:</b>El mismo día o 24 horas.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/analisis-de-orina.png" alt="Orina Completa">
+                        <h4 class="titulo">Orina Completa</h4>
+                        <p class="descripcion">Análisis físico, químico y microscópico de la orina. Útil para detectar infecciones, enfermedades renales y otros problemas metabólicos.</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 25.00 </p>
+                            <p><b>Preparación:</b>No requiere ayuno. Se recomienda recolectar la primera orina de la mañana.</p>
+                            <p><b>Importante:</b>La recolección debe hacerse en un recipiente estéril para evitar la contaminación de la muestra.</p>
+                            <p><b>Resultados:</b> Dentro de 24 - 48 horas.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/tomografia.jpg" alt="Tomografía">
+                        <h4 class="titulo">Tomografía</h4>
+                        <p class="descripcion">Técnica de imagen médica que utiliza rayos X y computadoras para crear imágenes transversales detalladas del cuerpo.</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 350.00 </p>
+                            <p><b>Preparación:</b>Con contraste: Se necesita un ayuno de 4 a 6 horas. Sin contraste: Generalmente no requiere ayuno.</p>
+                            <p><b>Utilidad:</b>Diagnostica fracturas complejas, detecta tumores y guia biopsias.</p>
+                            <p><b>Resultados:</b>La impresión de imágenes es inmediata; el informe médico suele estar disponible en 24 - 48 horas.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/ADN.jpg" alt="ADN">
+                        <h4 class="titulo">ADN</h4>
+                        <p class="descripcion">Análisis genético para identificar la composición única de su ADN. Se usa para pruebas de paternidad e identificar riesgos de enfermedades hereditarias..</p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 700.00 </p>
+                            <p><b>Preparación:</b>Las pruebas de saliva o hisopado bucal solo exigen no comer, beber, fumar o masticar chicle 30 minutos antes de la toma de muestra.</p>
+                            <p><b>Resultados:</b>1 a 6 semanas, según la complejidad del análisis de laboratorio requerido.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                    <article class="cuadro">
+                        <img src="img/hematologia.jpg" alt="Hematología">
+                        <h4 class="titulo">Hematología</h4>
+                        <p class="descripcion">Estudio de la sangre (eritrocitos), glóbulos blancos (leucocitos) y plaquetas. Es crucial para diagnosticar anemia, leucemia y problemas de coagulación.                    </p>
+                        <div class="descripcion2">
+                            <p><b>Precio:</b> S/ 50.00 </p>
+                            <p><b>Preparación:</b>Generalmente, se requiere un ayuno de 4 a 8 horas.</p>
+                            <p><b>Resultados:</b> Dentro de 24 horas o menos.</p>
+                        </div>
+                        <button class="boton-ver-mas">Ver más</button>
+                        <button class="boton-agregar">Agregar</button>
+                    </article>
+                </div>
+                <button class="boton-carrusel derecha" aria-label="Siguiente">&#10095;</button>
+            </div>
+
+            <div class="promocion">
+                <img src="img/doctora.png" alt="doctora">
+                <div class="promocion-content-right">
+                    <div class="promocion-texto">
+                    <p>En la Clinica Centenario del Norte</p>
+                    <h1>Tu salud,</h1>
+                    <h2>es nuestra prioridad</h2>
+                </div>
+                <div class="promocion-beneficios">
+                    <h3>Compra tus exámenes de laboratorio de forma rápida.</h3>
+                    <h3>Accede a diferentes pruebas disponibles para cubrir todas tus necesidades de salud.</h3>
+                    <h3>Recibe tus resultados en 24 horas directamente de manera virtual.</h3>
+                    <h3>Agenda tu toma de muestra de manera fácil y rápida.</h3>
+                </div>
+                </div> 
+            </div>
+        </section>
+    </main>
+    <div id="carrito" class="carrito">
+        <div class="carrito-contenido">
+            <div class="carrito-header">
+                <h3>Carrito de Análisis</h3>
+                <button class="cerrar-carrito">&times;</button>
+            </div>
+            <ul id="lista-carrito"></ul>
+            <div class="carrito-footer">
+                <p>Total de Análisis: <span id="total-analisis">0</span></p>
+                <button class="boton-checkout">Agendar Cita</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-descripcion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <div class="modal-info">
+                <img id="modal-imagen" src="" alt="Imagen de Análisis">
+                <div class="modal-texto">
+                    <h3 id="modal-titulo"></h3>
+                    <p id="modal-parrafo"></p>
+                    <p id="modal-parrafo2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"> <!--PIE DE PAGINA DE LA WEB-->
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links" id="footer-nosotros">
+                    <h4>Nosotros ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Quienes somos</a></li>
+                            <li><a href="#">Misión y Visión</a></li>
+                            <li><a href="#">Trabaja con nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-blog">
+                    <h4>Nuestro Blog ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Consejos</a></li>
+                            <li><a href="#">Autoexaminate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-legal">
+                    <h4>Información Legal ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Politicas de privacidad</a></li>
+                            <li><a href="#">Terminos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-redes">
+                    <h4>Siguenos ▾</h4>
+                    <div class="footer-content">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/clinicacentenariodelnorte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@centenario_delnorte?_r=1&_t=ZS-91kjkdxP0vo"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="dark-mode-switch" aria-label="Cambiar modo de color">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script_laboratorio.js"></script>
+</body>
+</html>
