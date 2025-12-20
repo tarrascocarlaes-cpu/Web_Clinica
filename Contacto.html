@@ -1,41 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centenario del Norte - Afiliación</title>
-    
+
     <link rel="stylesheet" href="css/styles_contacto.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
+
 <body>
 
-    <header class="header-principal">
-        <div class="contenedor-limite header-flex">
-            <div class="logo-container">
-                <img src="img/logo_clinica.jpeg" alt="Logo Centenario del Norte" class="logo-header">
-                <span class="separador-logo">|</span>
-                <img src="../Imagenes/Logo_Clinica_Texto.jpeg" alt="Logo Centenario del Norte" class="logo-header">
-            </div>
+    <header class="header">
+        <a href="index.html">
+            <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
+        </a>
 
-            <nav class="nav-derecha">
-                <a href="tel:+51999999999" class="item-contacto"><i class="fa-solid fa-phone"></i> 913854639 / 044 - 496 661</a>
-                <a href="index.html" class="boton-volver-header">Volver al Inicio</a>
-            </nav>
-        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#">Campañas ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Especialidades ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Staff Médico ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nuestro Blog ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ's ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="user-profile-container">
+                    <div class="user-icon" id="userIcon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="user-popup" id="userPopup">
+                        <div class="popup-header">
+                            <div class="popup-user-info">
+                                <p class="user-name">Juan Pérez</p>
+                                <p class="user-email">juan.perez@example.com</p>
+                            </div>
+                        </div>
+                        <ul class="popup-menu">
+                            <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Mis Citas</a></li>
+                            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                    Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <section class="seccion-hero">
-        
+
         <canvas id="canvas-red"></canvas>
 
         <div class="contenedor-limite hero-grid">
-            
+
             <div class="columna-info">
-                
+
                 <div class="titular-hero">
                     <span class="etiqueta-destacada">NUEVO PROGRAMA</span>
                     <h1>Afíliate a la Salud de Calidad</h1>
@@ -45,13 +119,16 @@
                 <div class="carrusel-marco">
                     <div class="carrusel-track">
                         <div class="slide">
-                            <img src="img/imagen1.jpg" alt="Slide 1" onerror="this.src='https://via.placeholder.com/600x350/033076/ffffff?text=Tecnología+Médica'">
+                            <img src="img/imagen1.jpg" alt="Slide 1"
+                                onerror="this.src='https://via.placeholder.com/600x350/033076/ffffff?text=Tecnología+Médica'">
                         </div>
                         <div class="slide">
-                            <img src="img/imagen2.jpg" alt="Slide 2" onerror="this.src='https://via.placeholder.com/600x350/00ca63/ffffff?text=Staff+Especializado'">
+                            <img src="img/imagen2.jpg" alt="Slide 2"
+                                onerror="this.src='https://via.placeholder.com/600x350/00ca63/ffffff?text=Staff+Especializado'">
                         </div>
                         <div class="slide">
-                            <img src="img/imagen3.jpg" alt="Slide 3" onerror="this.src='https://via.placeholder.com/600x350/033076/ffffff?text=Atención+24/7'">
+                            <img src="img/imagen3.jpg" alt="Slide 3"
+                                onerror="this.src='https://via.placeholder.com/600x350/033076/ffffff?text=Atención+24/7'">
                         </div>
                     </div>
                 </div>
@@ -84,7 +161,8 @@
                         <div class="area-legal">
                             <div class="checkbox-fila">
                                 <input type="checkbox" id="checkLegal">
-                                <label for="checkLegal">Acepto la <a href="#">Política de Privacidad</a> y el tratamiento de mis datos.</label>
+                                <label for="checkLegal">Acepto la <a href="#">Política de Privacidad</a> y el
+                                    tratamiento de mis datos.</label>
                             </div>
                         </div>
 
@@ -95,10 +173,10 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="curva-blanca">
             <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
-                <path d="M0 100L1440 100V0C1440 0 1100 80 720 80C340 80 0 0 0 0V100Z" fill="#F8F9FA"/>
+                <path d="M0 100L1440 100V0C1440 0 1100 80 720 80C340 80 0 0 0 0V100Z" fill="#F8F9FA" />
             </svg>
         </div>
     </section>
@@ -136,16 +214,51 @@
         </div>
     </section>
 
-    <footer class="pie-pagina">
-        <div class="contenedor-limite footer-content">
-            <div class="copyright">
-                <p>&copy; 2025 <strong>Centenario del Norte</strong>. Todos los derechos reservados.</p>
-            </div>
-            <div class="redes-sociales">
-                <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/clinicacentenariodelnorte"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@centenario_delnorte?_r=1&_t=ZS-91kjkdxP0vo"><i class="fa-brands fa-tiktok"></i></a>
-
+    <footer class="footer"> <!--PIE DE PAGINA DE LA WEB-->
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links" id="footer-nosotros">
+                    <h4>Nosotros ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Quienes somos</a></li>
+                            <li><a href="#">Misión y Visión</a></li>
+                            <li><a href="#">Trabaja con nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-blog">
+                    <h4>Nuestro Blog ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Consejos</a></li>
+                            <li><a href="#">Autoexaminate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-legal">
+                    <h4>Información Legal ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Politicas de privacidad</a></li>
+                            <li><a href="#">Terminos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-redes">
+                    <h4>Siguenos ▾</h4>
+                    <div class="footer-content">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fab fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.instagram.com/clinicacentenariodelnorte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@centenario_delnorte?_r=1&_t=ZS-91kjkdxP0vo"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -155,4 +268,3 @@
 </body>
 
 </html>
-

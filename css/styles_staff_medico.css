@@ -93,13 +93,6 @@ body {
     line-height: 1.4;
 }
 
-.skeleton-text {
-    height: 10px;
-    background-color: #e0e0e0;
-    margin-bottom: 8px;
-    border-radius: 2px;
-}
-
 .user-profile-container {
     position: relative;
     display: flex;
