@@ -70,6 +70,27 @@ $(document).ready(function () {
         }
     });
 
+    const $darkModeToggle = $('#darkModeToggle');
+    const $body = $('body');
+    const $icon = $darkModeToggle.find('i');
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        $body.addClass('dark-mode');
+        $icon.removeClass('fa-moon').addClass('fa-sun');
+    }
+
+    $darkModeToggle.on('click', function () {
+        $body.toggleClass('dark-mode');
+
+        if ($body.hasClass('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+            $icon.removeClass('fa-moon').addClass('fa-sun');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+            $icon.removeClass('fa-sun').addClass('fa-moon');
+        }
+    });
+
     const $userIcon = $('#userIcon');
     const $userPopup = $('#userPopup');
 
