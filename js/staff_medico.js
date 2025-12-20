@@ -38,7 +38,7 @@ $(document).ready(function () {
         );
 
         if (filteredDoctors.length === 0) {
-            $doctorsGrid.append('<p>No se encontraron médicos con esa especialidad.</p>');
+            $doctorsGrid.append('<p>No se encontraron médicos con esa especialidad o nombre.</p>');
             return;
         }
 
