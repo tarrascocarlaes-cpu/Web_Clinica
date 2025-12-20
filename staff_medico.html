@@ -111,6 +111,36 @@
         </section>
     </main>
 
+    <div id="doctorModal" class="modal-overlay">
+        <div class="modal-content doctor-modal-content">
+            <button class="close-modal" id="closeDoctorModal">&times;</button>
+            <div class="modal-body">
+                <div class="doctor-modal-header">
+                    <img id="modalDoctorImage" src="" alt="Doctor" class="doctor-modal-image">
+                    <div>
+                        <h2 id="modalDoctorName">Nombre del Doctor</h2>
+                        <p id="modalDoctorSpecialty" class="modal-specialty">Especialidad</p>
+                    </div>
+                </div>
+                <div class="doctor-modal-stats">
+                    <div class="stat-item">
+                        <span id="modalExperience" class="stat-value">0</span>
+                        <span class="stat-label">Años de Exp.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span id="modalClinicYears" class="stat-value">0</span>
+                        <span class="stat-label">Años en Clínica</span>
+                    </div>
+                    <div class="stat-item">
+                        <span id="modalConsultations" class="stat-value">0</span>
+                        <span class="stat-label">Consultas</span>
+                    </div>
+                </div>
+                <p id="modalDoctorDescription" class="doctor-modal-description">Descripción del doctor.</p>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer"> <!--PIE DE PAGINA DE LA WEB-->
         <div class="container">
             <div class="footer-row">
