@@ -129,6 +129,29 @@ $(document).ready(function () {
     $searchInput.on('input', function () {
         renderDoctors($(this).val());
     });
+
+    // Dark Mode Logic
+    const $darkModeToggle = $('#darkModeToggle');
+    const $body = $('body');
+    const $icon = $darkModeToggle.find('i');
+
+    // Check for saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        $body.addClass('dark-mode');
+        $icon.removeClass('fa-moon').addClass('fa-sun');
+    }
+
+    $darkModeToggle.on('click', function () {
+        $body.toggleClass('dark-mode');
+
+        if ($body.hasClass('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+            $icon.removeClass('fa-moon').addClass('fa-sun');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+            $icon.removeClass('fa-sun').addClass('fa-moon');
+        }
+    });
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
