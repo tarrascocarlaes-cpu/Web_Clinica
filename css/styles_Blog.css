@@ -1,0 +1,639 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #2c3e50;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/*------- ENCABEZADO (HEADER) Y NAVEGACION -------*/
+.header{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #263193;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+.color-sec{ color: #029d56;}
+.main-nav{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.nav-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 70%;
+}
+.nav-links > li{ position: relative; }
+.nav-links a{
+    text-decoration: none;
+    color: #343a40;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+.nav-links a:hover{ color: #0077b6; }
+
+/* Submenu */
+.submenu{
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+.nav-links > li:hover > .submenu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.submenu a{
+    padding: 8px 15px;
+    font-size: 0.95em;
+    color: #343a40;
+    white-space: nowrap;
+}
+.submenu a:hover{
+    background-color: #f7f9fc;
+    color: #0077b6;
+}
+
+/* Acciones (Botones) */
+.nav-actions{
+    display: flex;
+    gap: 10px;
+}
+.nav-actions .btn{
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+}
+.nav-actions .btn-primary{
+    background-color: transparent;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+}
+.nav-actions .btn-primary:hover{
+    background-color: #0077b6;
+    color: #fff;
+}
+.nav-actions .btn-secondary{
+    background-color: #28a745;
+    color: #fff;
+    border: 2px solid #28a745;
+}
+.nav-actions .btn-secondary:hover{
+    background-color: #176428;
+    border-color: #176428;
+}
+
+/* Boton de menu movil */
+.menu-toggle{
+    display: none; /* Oculto por defecto en escritorio */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+.menu-toggle .bar{
+    width: 100%;
+    height: 3px;
+    background-color: #343a40;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/*------- SECCION DEL BLOG -------*/
+.blog {
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.titulo {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 2.5em;
+    color: #1c4a9f;
+}
+.subtitulo {
+    text-align: center;
+    margin-top: 0;
+    color:  #777;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+/*Contenedor Principal (Grid para 2 columnas)*/
+.tarjetas {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 40px;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/*ArtIculo Principal (Columna Izquierda)*/
+.contenido-tarjetas {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+.img-principal {
+    width: 100%;
+    height: 400px;
+    background-color: #e0eaf3; 
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+.contenido-tarjetas h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-top: 0;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+.contenido-tarjetas p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    padding: 0 25px;
+    margin-bottom: 10px;
+}
+
+/*------- TARJETAS DE CHEQUEOS -------*/
+.tarjetas-chequeos {
+    display: flex; /* DistribuciOn horizontal */
+    gap: 20px; 
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap; 
+}
+.chequeo {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #37b34a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chequeo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.chequeo .card-title {
+    color: var(--color-primary-blue);
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.chequeo .card-description {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+}
+
+/* --- Barra Lateral (Columna Derecha) --- */
+.mini-tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.mini-tarjeta {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mini-tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+.img-mini {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    background-color: #e0eaf3;
+    border-radius: 8px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.contenido-mini { flex-grow: 1; }
+.contenido-mini h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    line-height: 1.3;
+    color: #2c3e50;
+}
+.sidebar-intro {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.4;
+}
+
+.sidebar-full-text {
+    padding-top: 10px;
+    font-size: 0.9em;
+    border-top: 1px dashed #eee;
+    margin-top: 10px;
+}
+.sidebar-full-text p { margin-bottom: 2px; }
+.sidebar-full-text p b { font-size: 0.9em; color: #1c4a9f; }
+.sidebar-full-text p:last-child { margin-bottom: 0; }
+
+.hidden { display: none; }
+
+/* Estilo del boton "Ver Mas" */
+.boton-ver-mas {
+    background-color: #37b34a;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    display: inline-block; 
+}
+.boton-ver-mas:hover { background-color: #2a8c38; }
+
+/*------- MEDIA QUERIES PARA RESPONSIVIDAD -------*/
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .header { padding: 15px 20px; }
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+    .main-nav {
+        position: absolute;
+        top: 65px; 
+        left: 0;
+        width: 100%;
+        height: auto; 
+        background-color: white;
+        flex-direction: column; 
+        transform: translateY(-100vh);
+        transition: transform 0.4s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .main-nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .nav-links > li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .nav-links a {
+        padding: 15px 20px;
+        text-align: left;
+    }
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding-left: 30px;
+        border-radius: 0;
+        min-width: auto;
+        background-color: #f7f9fc;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+    .nav-actions {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .nav-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: center; 
+    }
+    /* Ajuste del contenedor principal de Grid a una sola columna */
+    .tarjetas {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        padding: 0 25px; 
+    }
+    /* Articulo Principal */
+    .img-principal {
+        height: 250px; 
+        margin-bottom: 15px;
+    }
+    .contenido-tarjetas {padding: 25px;}
+    .contenido-tarjetas p {
+        text-align: justify;
+        font-size: 0.9em;
+    }
+    .contenido-tarjetas h2 { font-size: 1.4em; }
+    /* Tarjetas Chequeos (las internas) */
+    .tarjetas-chequeos {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .chequeo .card-title {
+        font-size: 0.95em; 
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    .chequeo .card-description {
+        font-size: 0.85em; 
+        line-height: 1.3;
+    }
+    /* Mini Tarjetas */
+    .mini-tarjetas {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    .mini-tarjeta {
+        flex-direction: row; 
+        align-items: center;
+        text-align: left;
+    }
+    .img-mini {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    .contenido-mini p{font-size: 0.9; text-align: justify;}
+    .contenido-mini h3 { font-size: 1.1em; }
+}
+
+/*FOOTER*/
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer{
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: black;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: black;
+    padding-left: 6px;
+}
+
+.social-links a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all .5s ease;
+}
+
+@media (max-width: 767px) {
+
+    .footer-links {
+        width: 100%;
+        text-align: left;
+        border: 1px solid black;
+    }
+    
+    .footer-links h4 {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 15px 0;
+        font-weight: 600;
+        border-bottom: none;
+    }
+
+    .footer-content{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        padding-bottom: 0;
+    }
+
+    .footer-links.active .footer-content{
+        max-height: 300px;
+        padding-bottom: 15px;
+    }
+
+    .footer-links .social-links{
+        justify-content: flex-start;
+        padding-top: 10px;
+    }
+}
+
+/*------- CSS PARA MODO OSCURO -------*/
+/* Definición de variables de color */
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-sub: #555;
+    --header-bg: #ffffff;
+    --border-color: #f0f0f0;
+    --footer-bg: #ffffff;
+    --nav-link: #343a40;
+    --article-title-color: #2c3e50;
+    --card-desc-color: #555;
+    --blog-p-color: #555;
+}
+
+/* Variables para Modo Oscuro */
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-sub: #b0b0b0;
+    --header-bg: #181818;
+    --border-color: #333;
+    --footer-bg: #181818;
+    --nav-link: #ffffff;
+    --article-title-color: #909eaf;
+    --card-desc-color: #d1d1d1;
+    --blog-p-color: #ececec;
+}
+
+/* Aplicación de variables a los elementos existentes */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header, .footer {
+    background-color: var(--header-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contenido-tarjetas, .mini-tarjeta, .chequeo, .submenu {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main) !important;
+}
+.contenido-tarjetas h2, 
+.contenido-mini h3, 
+.chequeo .card-title {
+    color: var(--article-title-color) !important;
+    transition: color 0.3s ease;
+}
+.contenido-tarjetas p {
+    color: var(--blog-p-color) !important;
+}
+.card-description, .sidebar-intro, .sidebar-full-text p {
+    color: var(--card-desc-color) !important;
+}
+
+/* Negritas dentro de los cuadros para que no se pierdan */
+body.dark-mode b, body.dark-mode strong {
+    color: #ffffff;
+}
+.nav-links a, .footer-links h4, .footer-links ul li a {
+    color: var(--nav-link) !important;
+}
+
+.subtitulo, .sidebar-intro, .card-description {
+    color: var(--text-sub) !important;
+}
+
+/* Ajuste para el menú hamburguesa en móvil */
+body.dark-mode .menu-toggle .bar {
+    background-color: #ffffff;
+}
+
+body.dark-mode .main-nav {
+    background-color: var(--header-bg);
+}
+
+/* Ajuste de sombras para que no se vean blancas en modo oscuro */
+body.dark-mode .contenido-tarjetas, 
+body.dark-mode .mini-tarjeta {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+/* --- Boton de Modo Oscuro Flotante --- */
+.dark-mode-switch {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1c4a9f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: transform 0.3s, background-color 0.3s;
+}

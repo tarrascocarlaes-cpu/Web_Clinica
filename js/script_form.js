@@ -1,3 +1,4 @@
+
 function validarFormulario(){
 
     let nombre = document.getElementById("nombre").value.trim();
@@ -110,7 +111,9 @@ function validarFormulario(){
         return false;
     }
 
-    return true;
+    window.location.href = "index.html";
+
+    return false;
 }
 
     var amazonas = new Array("Seleccione su ciudad","Bagua","Bongará","Chachapoyas","Condorcanqui","Luya","Rodríguez de Mendoza","Utcubamba");
@@ -214,4 +217,84 @@ function toogleSeguro(){
         aseguradora.value = "";
         poliza.value = "";
     }
+}
+
+function agregarAlergia(){
+
+    let item = document.createElement("div");
+    item.classList.add("item_alergia");
+
+    let newAlergia = document.createElement("input");
+    newAlergia.type = "text";
+    newAlergia.name = "alergia";
+    newAlergia.placeholder = "Ingrese otra alergia";
+
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerText = "✖";
+    btnEliminar.classList.add("btnEliminar");
+
+    btnEliminar.onclick = function() {
+        item.remove();
+    };
+
+    item.appendChild(newAlergia);
+    item.appendChild(btnEliminar);
+
+    let boton = document.getElementById("btnAgregarA");
+    let contenedor = document.getElementById("container_Alergias");
+
+    contenedor.insertBefore(item, boton);
+}
+
+function agregarEnfermedad(){
+    let item = document.createElement("div");
+    item.classList.add("item_enfermedad");
+
+    let newEnfermedad = document.createElement("input");
+    newEnfermedad.type = "text";
+    newEnfermedad.name = "enfermedad";
+    newEnfermedad.placeholder = "Ingrese otra enfermedad";
+
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerText = "✖";
+    btnEliminar.classList.add("btnEliminar");
+
+    btnEliminar.onclick = function() {
+        item.remove();
+    };
+
+    item.appendChild(newEnfermedad);
+    item.appendChild(btnEliminar);
+
+    let boton = document.getElementById("btnAgregarE");
+    let contenedor = document.getElementById("container_Enfermedad");
+
+    contenedor.insertBefore(item, boton);
+}
+
+function agregarCirugia(){
+    let item = document.createElement("div");
+    item.classList.add("item_cirugia");
+
+    let newCirugia = document.createElement("input");
+    newCirugia.type = "text";
+    newCirugia.name = "cirugias";
+    newCirugia.placeholder = "Ingrese otra cirugia";
+
+    let btnEliminar = document.createElement("button");
+    btnEliminar.innerText = "✖";
+    btnEliminar.classList.add("btnEliminar");
+
+    btnEliminar.onclick = function() {
+        item.remove();
+    };
+
+    item.appendChild(newCirugia);
+    item.appendChild(btnEliminar);
+
+    let boton = document.getElementById("btnAgregarC");
+    let contenedor = document.getElementById("container_Cirugias");
+
+    contenedor.insertBefore(item, boton);
+
 }
