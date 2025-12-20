@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia - Clínica Centenario</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/farmacia.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header class="header">
+        <a href="index.html">
+            <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#">Campañas ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                        <li><a href="#">Campaña 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                        <li><a href="#">Servicio 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Especialidades ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                        <li><a href="#">Especialidad 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Staff Médico ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                        <li><a href="#">Medico 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nuestro Blog ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                        <li><a href="#">Noticia 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ's ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                        <li><a href="#">Pregunta 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="user-profile-container">
+                    <div class="user-icon" id="userIcon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="user-popup" id="userPopup">
+                        <div class="popup-header">
+                            <div class="popup-user-info">
+                                <p class="user-name">Juan Pérez</p>
+                                <p class="user-email">juan.perez@example.com</p>
+                            </div>
+                        </div>
+                        <ul class="popup-menu">
+                            <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Mis Citas</a></li>
+                            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                    Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <button id="cartBtn" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount" class="cart-count">0</span>
+    </button>
+
+    <main>
+        <section class="farmacia-container">
+            <h1>Farmacia Virtual</h1>
+            <p class="subtitle">Encuentra tus medicamentos y productos de salud</p>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar productos...">
+            </div>
+
+            <div id="productsGrid" class="products-grid">
+            </div>
+        </section>
+    </main>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button id="closeCart" class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">S/ 0.00</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <footer class="footer"> <!--PIE DE PAGINA DE LA WEB-->
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links" id="footer-nosotros">
+                    <h4>Nosotros ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Quienes somos</a></li>
+                            <li><a href="#">Misión y Visión</a></li>
+                            <li><a href="#">Trabaja con nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-blog">
+                    <h4>Nuestro Blog ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Consejos</a></li>
+                            <li><a href="#">Autoexaminate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-legal">
+                    <h4>Información Legal ▾</h4>
+                    <div class="footer-content">
+                        <ul>
+                            <li><a href="#">Politicas de privacidad</a></li>
+                            <li><a href="#">Terminos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links" id="footer-redes">
+                    <h4>Siguenos ▾</h4>
+                    <div class="footer-content">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fab fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.instagram.com/clinicacentenariodelnorte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@centenario_delnorte?_r=1&_t=ZS-91kjkdxP0vo"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/farmacia.js"></script>
+</body>
+
+</html>
