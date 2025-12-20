@@ -148,8 +148,6 @@ form input[type="checkbox"]+label {
 
 .checkbox-group {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     margin-top: 15px;
 }
 
