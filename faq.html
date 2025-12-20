@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Centenario</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="faq.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- PARTÍCULAS -->
+<canvas class="particles"></canvas>
+
+<!-- BOTÓN MODO OSCURO -->
+<button class="theme-toggle" id="themeToggle" title="Modo oscuro / claro">
+    🌙
+</button>
+
+<div class="faq-wrapper">
+    <div class="faq-container">
+
+        <!-- HEADER -->
+        <header class="faq-header">
+            <div class="header-text">
+                <h1>Preguntas Frecuentes</h1>
+                <p class="subtitle">
+                    Resolvemos tus dudas más comunes sobre nuestros servicios
+                </p>
+            </div>
+
+            <button class="send-question-button" id="openModal">
+                <i class="fas fa-paper-plane"></i>
+                Enviar pregunta
+            </button>
+        </header>
+
+        <!-- LISTA FAQ -->
+        <div class="faq-list">
+
+            <!-- PREGUNTA 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-circle-question question-icon"></i>
+                    <h3>¿Cómo reservar una cita?</h3>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Puedes reservar una cita desde nuestra página web, llamando a la central telefónica
+                        o visitando cualquiera de nuestras sedes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PREGUNTA 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-circle-question question-icon"></i>
+                    <h3>¿Qué servicios ofrece la clínica?</h3>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Brindamos consultas médicas, laboratorio clínico, estudios de imagen,
+                        vacunación y atención especializada.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PREGUNTA 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-circle-question question-icon"></i>
+                    <h3>¿Cuál es el horario de atención?</h3>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Atendemos de lunes a viernes de 8:00 a.m. a 8:00 p.m.
+                        y sábados de 9:00 a.m. a 2:00 p.m.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PREGUNTA 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-circle-question question-icon"></i>
+                    <h3>¿Aceptan seguros médicos?</h3>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Sí, trabajamos con diversos seguros médicos. Te recomendamos comunicarte
+                        con nuestra central para confirmar la cobertura.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PREGUNTA 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-circle-question question-icon"></i>
+                    <h3>¿Cómo puedo cancelar o reprogramar una cita?</h3>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Puedes cancelar o reprogramar tu cita llamando a nuestra central telefónica
+                        con al menos 24 horas de anticipación.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FORMULARIO -->
+<div class="modal" id="questionModal">
+    <div class="modal-content">
+
+        <span class="close" id="closeModal">&times;</span>
+
+        <h2>Enviar una pregunta</h2>
+
+        <form id="questionForm">
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Tu nombre">
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="correo@ejemplo.com">
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="question">Pregunta</label>
+                <textarea id="question" rows="4" placeholder="Escribe tu pregunta aquí..."></textarea>
+                <small class="error"></small>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Enviar pregunta
+            </button>
+
+        </form>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="faq.js"></script>
+
+</body>
+</html>

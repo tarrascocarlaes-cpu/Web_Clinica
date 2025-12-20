@@ -1,0 +1,353 @@
+/* ==============================
+   RESET Y BASE
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2f7, #f8fafc);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    overflow-x: hidden;
+    transition: background 0.4s ease;
+}
+
+/* ==============================
+   CONTENEDOR
+============================== */
+.dashboard-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    z-index: 1;
+}
+
+.dashboard-container {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a3b80;
+    margin-bottom: 30px;
+}
+
+/* ==============================
+   GRID CAMPAÑAS
+============================== */
+.campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* ==============================
+   TARJETAS
+============================== */
+.card {
+    background: #ffffff;
+    border: 1px solid #e6eaf0;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* ==============================
+   ICONO
+============================== */
+.icon-header {
+    width: 48px;
+    height: 48px;
+    background: #eaf0ff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-header i {
+    font-size: 22px;
+    color: #1a3b80;
+}
+
+/* ==============================
+   CONTENIDO
+============================== */
+.card-content h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1a3b80;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    margin: 6px 0;
+}
+
+.timer {
+    font-size: 13px;
+    font-weight: 500;
+    color: #e5533d;
+    margin-bottom: 10px;
+}
+
+.quota {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   ESTADO
+============================== */
+.status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status.active {
+    background: #e6f7eb;
+    color: #28a745;
+}
+
+.status:not(.active) {
+    background: #fff4e5;
+    color: #e69500;
+}
+
+/* ==============================
+   BOTÓN
+============================== */
+.enroll-btn {
+    margin-top: auto;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #1a3b80;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.enroll-btn:hover {
+    background: #152d66;
+}
+
+.enroll-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   MODAL
+============================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ==============================
+   FORM
+============================== */
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #1a3b80;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #dce1ea;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 14px;
+    background: #1a3b80;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-error {
+    color: #dc3545;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* ==============================
+   TOAST
+============================== */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #28a745;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: slideIn 0.4s ease;
+    z-index: 2000;
+}
+
+.toast.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0); }
+}
+
+/* ==============================
+   BOTÓN MODO OSCURO
+============================== */
+.theme-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: #1a3b80;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 3000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+   PARTICULAS
+============================== */
+.particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ==============================
+   DARK MODE
+============================== */
+body.dark {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e5e7eb;
+}
+
+body.dark .dashboard-container {
+    background: #020617;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+body.dark .card {
+    background: #020617;
+    border-color: #1e293b;
+}
+
+body.dark .card-content h3,
+body.dark .dashboard-header h1 {
+    color: #e5e7eb;
+}
+
+body.dark .date,
+body.dark .quota {
+    color: #9ca3af;
+}
+
+body.dark .icon-header {
+    background: #1e293b;
+}
+
+body.dark .enroll-btn {
+    background: #2563eb;
+}
+
+body.dark .enroll-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .campaign-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-container {
+        padding: 25px 20px;
+        border-radius: 0;
+    }
+}
