@@ -1,10 +1,8 @@
-/*SCRIPT DEL LOGIN Y REGISTER*/
 document.addEventListener('DOMContentLoaded', (event) => {
-    //Referencias
     const container = document.querySelector('.container');
     const registerBtn = document.querySelector('.register_btn');
     const loginBtn = document.querySelector('.login_btn');
-    
+
     if (registerBtn && loginBtn && container) {
         registerBtn.addEventListener('click', () => {
             container.classList.add('active');
@@ -13,9 +11,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             container.classList.remove('active');
         });
     }
-    const menuToogle = document.querySelector('.menu-toggle'); 
-    const nav = document.querySelector('.main-nav'); 
-    const navLinks = document.querySelector('.nav-links'); 
+    const menuToogle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    const navLinks = document.querySelector('.nav-links');
     if (menuToogle && nav) {
         menuToogle.addEventListener('click', () => {
             nav.classList.toggle('open');
@@ -47,21 +45,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
-
-/*SCRIPT PARA VALIDAR LOS CAMPOS DE LOGIN Y REGISTER AL CAMBIAR DE BUTTON A "a" */
 document.addEventListener('DOMContentLoaded', (event) => {
-    //Referencias
     const loginLink = document.getElementById('loginLink');
     const loginForm = document.getElementById('loginForm');
     const registerLink = document.getElementById('registerLink');
     const registerForm = document.getElementById('registerForm');
     if (loginLink && loginForm) {
         loginLink.addEventListener('click', (e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             const formValid = loginForm.reportValidity();
             if (formValid) {
-                window.location.href = 'formulario_datos.html'; 
-            } else {}
+                window.location.href = 'formulario_datos.html';
+            } else { }
         });
     }
     if (registerLink && registerForm) {
@@ -76,32 +71,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 form.elements['confirmPassword'].focus();
                 return false;
             }
-            return true; 
+            return true;
         }
         registerLink.addEventListener('click', (e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             if (validateRegistration(registerForm)) {
-                window.location.href = 'formulario_datos.html'; 
+                window.location.href = 'formulario_datos.html';
             }
         });
     }
 });
 
-/*Footer*/
-document.addEventListener('DOMContentLoaded',(event) => {
-    if(window.innerWidth<= 767){
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (window.innerWidth <= 767) {
         const footerHeaders = document.querySelectorAll('.footer-links h4');
-        footerHeaders.forEach(header =>{
-            header.addEventListener('click', () =>{
+        footerHeaders.forEach(header => {
+            header.addEventListener('click', () => {
                 const parent = header.closest('.footer-links');
                 const content = parent.querySelector('.footer-content');
-                if(parent.classList.contains('active')){
+                if (parent.classList.contains('active')) {
                     content.style.maxHeight = 0;
                     parent.classList.remove('active');
-                }else{
-                    document.querySelectorAll('.footer-links.active').forEach(item =>{
+                } else {
+                    document.querySelectorAll('.footer-links.active').forEach(item => {
                         item.classList.remove('active');
-                        item.querySelector('.footer-content').style.maxHeight=0;
+                        item.querySelector('.footer-content').style.maxHeight = 0;
                     });
                     parent.classList.add('active');
                     content.style.maxHeight = content.scrollHeight + "px";
@@ -110,7 +104,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
         });
     }
 });
-/*Modo oscuro*/
+
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
@@ -135,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     darkModeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         const isDark = body.classList.contains('dark-mode');
-        
+
         updateIcon(isDark);
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
