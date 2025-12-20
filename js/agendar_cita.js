@@ -69,4 +69,19 @@ $(document).ready(function () {
             $(this).next('.error').hide();
         }
     });
+
+    const $userIcon = $('#userIcon');
+    const $userPopup = $('#userPopup');
+
+    $userIcon.on('click', function (e) {
+        e.stopPropagation();
+        $userPopup.toggleClass('active');
+    });
+
+    $(window).on('click', function (e) {
+        if (!$userIcon.is(e.target) && $userIcon.has(e.target).length === 0 &&
+            !$userPopup.is(e.target) && $userPopup.has(e.target).length === 0) {
+            $userPopup.removeClass('active');
+        }
+    });
 });

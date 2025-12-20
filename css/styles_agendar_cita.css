@@ -9,12 +9,10 @@
 .header {
     display: flex;
     justify-content: space-between;
-    /* Espacio entre logo/nav y acciones */
     align-items: center;
     padding: 15px 30px;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    /* Sombra elegante */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -24,7 +22,6 @@ body {
     background-color: #f4f7f6;
 }
 
-/* --- Page Header (Cardiologia Section) --- */
 .page-header {
     width: 100%;
     max-width: 700px;
@@ -68,7 +65,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Centra los párrafos de introducción del formulario */
 .formulario>p {
     text-align: center;
     font-size: 1.1em;
@@ -108,13 +104,27 @@ select {
     font-size: 1em;
 }
 
-/* Date Range Container */
+.form-input-container {
+    display: flex;
+    gap: 10px
+}
+
 .date-range-container {
     display: flex;
     gap: 10px;
 }
 
-/* Radio Group */
+.son-form-input-container {
+    width: 100%;
+    flex: 1;
+    gap: 10px;
+    text-align: left;
+}
+
+.son-form-input-container label {
+    display: block;
+}
+
 .radio-group {
     display: flex;
     gap: 15px;
@@ -122,7 +132,6 @@ select {
     flex-wrap: wrap;
 }
 
-/* Estilos para radios y checkboxes */
 form input[type="radio"],
 form input[type="checkbox"] {
     margin-right: 5px;
@@ -144,7 +153,6 @@ form input[type="checkbox"]+label {
     margin-top: 15px;
 }
 
-/* Ocultar los mensajes de error por defecto */
 .error {
     display: none;
     color: #d93025;
@@ -174,12 +182,10 @@ select.error-border {
     max-width: 300px;
 }
 
-/* Efecto hover para el botón */
 .btn-submit:hover {
     background-color: #0056b3;
 }
 
-/* Párrafo final (link al asistente) */
 .formulario>p:last-of-type {
     margin-top: 20px;
     font-size: 0.9em;
@@ -194,7 +200,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- Modal --- */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -238,7 +243,172 @@ a:hover {
     margin-bottom: 15px;
 }
 
-/* --- Responsive Media Queries --- */
+.user-profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    font-size: 2.5rem;
+    color: #033076;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-icon:hover {
+    color: #0056b3;
+}
+
+.user-popup {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.user-popup.active {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.popup-user-info .user-name {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.popup-user-info .user-email {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 5px 0 0 0;
+}
+
+.popup-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.popup-menu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.popup-menu li:last-child {
+    border-bottom: none;
+}
+
+.popup-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-menu a:hover {
+    background-color: #f0f4f8;
+    color: #033076;
+    text-decoration: none;
+}
+
+.popup-menu a.logout {
+    color: #d93025;
+}
+
+.popup-menu a.logout:hover {
+    background-color: #fff0f0;
+    color: #c5221f;
+}
+
+/*FOOTER*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: black;
+    padding-left: 6px;
+}
+
+.social-links a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all .5s ease;
+}
+
 @media (max-width: 768px) {
     .formulario {
         padding: 20px;
@@ -254,8 +424,46 @@ a:hover {
         align-items: flex-start;
     }
 
+    .form-input-container {
+        flex-direction: column;
+    }
+
     .btn-submit {
         width: 100%;
         max-width: 100%;
+    }
+
+    .footer-links {
+        width: 100%;
+        text-align: left;
+        border: 1px solid black;
+    }
+
+    .footer-links h4 {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 15px 0;
+        font-weight: 600;
+        border-bottom: none;
+    }
+
+    .footer-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        padding-bottom: 0;
+    }
+
+    .footer-links.active .footer-content {
+        max-height: 300px;
+        padding-bottom: 15px;
+    }
+
+    .footer-links .social-links {
+        justify-content: flex-start;
+        padding-top: 10px;
     }
 }
