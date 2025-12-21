@@ -10,6 +10,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles_dise_priv.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/farmacia.css">
 </head>
 
 <body>
@@ -19,24 +21,74 @@
 
     <!-- HEADER -->
     <header class="header">
-        <div class="nav-inner">
+        <a href="index.html">
+            <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
+        </a>
 
-            <div class="brand">
-                <img src="img/logo_clinica.jpeg" alt="Logo de Centenarios del Norte" class="logo-img">
-                <h1>Centenarios del Norte</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#">Campañas ▾</a>
+                    <ul class="submenu">
+                        <li><a href="campañas.html">Nuestras Campañas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios ▾</a>
+                    <ul class="submenu">
+                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
+                        <li><a href="agendar_cita.html">Agenda tu Cita</a></li>
+                        <li><a href="farmacia.html">Farmacia</a></li>
+                        <li><a href="Laboratorio.html">Laboratorio</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Especialidades ▾</a>
+                    <ul class="submenu">
+                        <li><a href="especialidades.html">Nuestras Especialidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Staff Médico ▾</a>
+                    <ul class="submenu">
+                        <li><a href="staff_medico.html">Nuestros Médicos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nuestro Blog ▾</a>
+                    <ul class="submenu">
+                        <li><a href="Blog.html">Pagina Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ's ▾</a>
+                    <ul class="submenu">
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="user-profile-container">
+                    <div class="user-icon" id="userIcon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="user-popup" id="userPopup">
+                        <div class="popup-header">
+                            <div class="popup-user-info">
+                                <p class="user-name">Juan Pérez</p>
+                                <p class="user-email">juan.perez@example.com</p>
+                            </div>
+                        </div>
+                        <ul class="popup-menu">
+                            <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Mis Citas</a></li>
+                            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                    Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <nav class="nav" aria-label="Navegación principal">
-                <ul>
-                   
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Staff médico</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                </ul>
-            </nav>
-
-            <a href="#contact" class="cta">Contacto</a>
-        </div>
+        </nav>
     </header>
 
     <!-- MAIN -->
@@ -47,8 +99,6 @@
             <div class="hero-content-wrapper">
 
                 <p class="breadcrumb">
-                    <a href="#">Inicio</a>
-                    <span aria-hidden="true">›</span>
                     <span>Políticas de Privacidad</span>
                 </p>
 
@@ -178,54 +228,51 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="page-footer reveal">
-
-        <div class="footer-inner">
-
-            <div class="footer-columns">
-
-                <div class="footer-col">
-                    <h4>Nosotros</h4>
+    <footer class="footer"> <!--PIE DE PAGINA DE LA WEB-->
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-links" id="footer-nosotros">
+                <h4>Nosotros ▾</h4>
+                <div class="footer-content">
                     <ul>
-                        <li><a href="#">Quiénes somos</a></li>
-                        <li><a href="#">Gestión ética</a></li>
-            
+                        <li><a href="Qsomos.html">Quienes somos</a></li>
+                        <li><a href="#">Misión y Visión</a></li>
+                        <li><a href="Contacto.html">Trabaja con nosotros</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Noticias</h4>
-                    <ul>
-                        <li><a href="#">Soluciones COVID</a></li>
-                        <li><a href="#">Fundación centenario IDEAS</a></li>
-                        <li><a href="#">Blog informativo</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Legales</h4>
-                    <ul>
-                        <li><a href="#">Derechos</a></li>
-                        <li><a href="#">Política de privacidad</a></li>
-                        <li><a href="#">Términos y condiciones</a></li>
-                    </ul>
-                </div>
-
             </div>
-
-            <div class="footer-cta">
-                <h4>Estamos para ayudarte</h4>
-                <p>Accede al directorio de nuestras sedes</p>
-                <a href="#contact" class="cta-footer-btn">Contáctanos</a>
+            <div class="footer-links" id="footer-blog">
+                <h4>Nuestro Blog ▾</h4>
+                <div class="footer-content">
+                    <ul>
+                        <li><a href="Blog.html">Noticias</a></li>
+                        <li><a href="Blog.html">Consejos</a></li>
+                        <li><a href="Blog.html">Autoexaminate</a></li>
+                    </ul>
+                </div>
             </div>
-
+            <div class="footer-links" id="footer-legal">
+                <h4>Información Legal ▾</h4>
+                <div class="footer-content">
+                    <ul>
+                        <li><a href="privacidad.html">Politicas de privacidad</a></li>
+                        <li><a href="TerCondiciones.html">Terminos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links" id="footer-redes">
+                <h4>Siguenos ▾</h4>
+                <div class="footer-content">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/clinicacentenariodelnorte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@centenario_delnorte?_r=1&_t=ZS-91kjkdxP0vo"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Centenarios del Norte</p>
-        </div>
-
-    </footer>
+    </div>
+</footer>
 
     <!-- JS -->
     <script src="js/script_privacidad.js"></script>
