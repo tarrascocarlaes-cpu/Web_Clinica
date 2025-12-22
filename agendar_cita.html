@@ -19,13 +19,13 @@
         <a href="index.html">
             <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
         </a>
-        
+
         <button class="menu-toggle" aria-label="Abrir menú">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </button>
-        
+
         <nav class="main-nav">
             <ul class="nav-links">
                 <li><a href="#">Campañas ▾</a>
@@ -64,8 +64,24 @@
             </ul>
 
             <div class="nav-actions">
-                <a href="login.html" class="btn btn-primary"><i class="fa-regular fa-user"></i>&nbsp; Iniciar Sesión</a>
-                <a href="register.html" class="btn btn-secondary"><i class="fa-regular fa-user"></i>&nbsp; Registrarse</a>
+                <div class="user-profile-container">
+                    <div class="user-icon" id="userIcon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="user-popup" id="userPopup">
+                        <div class="popup-header">
+                            <div class="popup-user-info">
+                                <p class="user-name">Juan Pérez</p>
+                                <p class="user-email">juan.perez@example.com</p>
+                            </div>
+                        </div>
+                        <ul class="popup-menu">
+                            <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Mis Citas</a></li>
+                            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                    Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
