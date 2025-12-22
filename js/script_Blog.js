@@ -1,21 +1,8 @@
 /*SCRIPT DEL LOGIN Y REGISTER*/
 document.addEventListener('DOMContentLoaded', (event) => {
-    //Referencias
-    const container = document.querySelector('.container');
-    const registerBtn = document.querySelector('.register_btn');
-    const loginBtn = document.querySelector('.login_btn');
-    
-    if (registerBtn && loginBtn && container) {
-        registerBtn.addEventListener('click', () => {
-            container.classList.add('active');
-        });
-        loginBtn.addEventListener('click', () => {
-            container.classList.remove('active');
-        });
-    }
-    const menuToogle = document.querySelector('.menu-toggle'); 
-    const nav = document.querySelector('.main-nav'); 
-    const navLinks = document.querySelector('.nav-links'); 
+    const menuToogle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    const navLinks = document.querySelector('.nav-links');
     if (menuToogle && nav) {
         menuToogle.addEventListener('click', () => {
             nav.classList.toggle('open');
@@ -47,44 +34,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const $userIcon = $('#userIcon');
+    const $userPopup = $('#userPopup');
 
-/*SCRIPT PARA VALIDAR LOS CAMPOS DE LOGIN Y REGISTER AL CAMBIAR DE BUTTON A "a" */
-document.addEventListener('DOMContentLoaded', (event) => {
-    //Referencias
-    const loginLink = document.getElementById('loginLink');
-    const loginForm = document.getElementById('loginForm');
-    const registerLink = document.getElementById('registerLink');
-    const registerForm = document.getElementById('registerForm');
-    if (loginLink && loginForm) {
-        loginLink.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            const formValid = loginForm.reportValidity();
-            if (formValid) {
-                window.location.href = 'formulario_datos.html'; 
-            } else {}
-        });
-    }
-    if (registerLink && registerForm) {
-        function validateRegistration(form) {
-            const password = form.elements['password'].value;
-            const confirmPassword = form.elements['confirmPassword'].value;
-            if (!form.reportValidity()) {
-                return false;
-            }
-            if (password !== confirmPassword) {
-                alert("Las contraseñas no coinciden. Por favor, verifíquelas.");
-                form.elements['confirmPassword'].focus();
-                return false;
-            }
-            return true; 
+    $userIcon.on('click', function (e) {
+        e.stopPropagation();
+        $userPopup.toggleClass('active');
+    });
+
+    $(window).on('click', function (e) {
+        if (!$userIcon.is(e.target) && $userIcon.has(e.target).length === 0 &&
+            !$userPopup.is(e.target) && $userPopup.has(e.target).length === 0) {
+            $userPopup.removeClass('active');
         }
-        registerLink.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            if (validateRegistration(registerForm)) {
-                window.location.href = 'formulario_datos.html'; 
-            }
-        });
-    }
+    });
 });
 
 /*Boton Ver Mas*/
@@ -96,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = button.closest('.mini-tarjeta');
             // Encuentra el div que contiene el texto completo (clase 'sidebar-full-text')
             const fullText = card.querySelector('.sidebar-full-text');
-                
+
             // Verifica si el texto completo esta oculto (tiene la clase 'hidden')
             if (fullText.classList.contains('hidden')) {
                 // Si esta oculto, lo muestra
@@ -117,20 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 /*Footer*/
-document.addEventListener('DOMContentLoaded',(event) => {
-    if(window.innerWidth<= 767){
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (window.innerWidth <= 767) {
         const footerHeaders = document.querySelectorAll('.footer-links h4');
-        footerHeaders.forEach(header =>{
-            header.addEventListener('click', () =>{
+        footerHeaders.forEach(header => {
+            header.addEventListener('click', () => {
                 const parent = header.closest('.footer-links');
                 const content = parent.querySelector('.footer-content');
-                if(parent.classList.contains('active')){
+                if (parent.classList.contains('active')) {
                     content.style.maxHeight = 0;
                     parent.classList.remove('active');
-                }else{
-                    document.querySelectorAll('.footer-links.active').forEach(item =>{
+                } else {
+                    document.querySelectorAll('.footer-links.active').forEach(item => {
                         item.classList.remove('active');
-                        item.querySelector('.footer-content').style.maxHeight=0;
+                        item.querySelector('.footer-content').style.maxHeight = 0;
                     });
                     parent.classList.add('active');
                     content.style.maxHeight = content.scrollHeight + "px";
@@ -154,9 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Cargar preferencia guardada
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'dark') {
+    // Cargar preferencia guardada (usando 'darkMode' y 'enabled'/'disabled' como en farmacia.js)
+    if (localStorage.getItem('darkMode') === 'enabled') {
         body.classList.add('dark-mode');
         updateIcon(true);
     }
@@ -164,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
     darkModeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         const isDark = body.classList.contains('dark-mode');
-        
+
         updateIcon(isDark);
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
     });
 });

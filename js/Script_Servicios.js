@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const container = document.querySelector('.container');
-    const registerBtn = document.querySelector('.register_btn');
-    const loginBtn = document.querySelector('.login_btn');
 
-    if (registerBtn && loginBtn && container) {
-        registerBtn.addEventListener('click', () => {
-            container.classList.add('active');
-        });
-        loginBtn.addEventListener('click', () => {
-            container.classList.remove('active');
-        });
-    }
     const menuToogle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
     const navLinks = document.querySelector('.nav-links');
@@ -110,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const icon = darkModeToggle.querySelector('i');
 
-    // Función para actualizar el icono
     const updateIcon = (isDark) => {
         if (isDark) {
             icon.classList.replace('fa-moon', 'fa-sun');
@@ -119,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Cargar preferencia guardada
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
