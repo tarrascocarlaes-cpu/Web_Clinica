@@ -6,16 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas Frecuentes - Centenario</title>
     <link rel="stylesheet" href="css/faq.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <canvas class="particles"></canvas>
-    <button class="theme-toggle" id="themeToggle" title="Modo oscuro / claro">
-        🌙
-    </button>
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#">Campañas <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="campañas.html">Nuestras Campañas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
+                        <li><a href="agendar_cita.html">Agenda tu Cita</a></li>
+                        <li><a href="farmacia.html">Farmacia</a></li>
+                        <li><a href="Laboratorio.html">Laboratorio</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Especialidades <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="especialidades.html">Nuestras Especialidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Staff Médico <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="staff_medico.html">Nuestros Médicos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nuestro Blog <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="Blog.html">Página Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ's <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="user-profile-container">
+                    <div class="user-icon" id="userIcon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="user-popup" id="userPopup">
+                        <div class="popup-header">
+                            <div class="popup-user-info">
+                                <p class="user-name">Juan Pérez</p>
+                                <p class="user-email">juan.perez@example.com</p>
+                            </div>
+                        </div>
+                        <ul class="popup-menu">
+                            <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Mis Citas</a></li>
+                            <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <div class="faq-wrapper">
         <div class="faq-container">
@@ -34,14 +105,14 @@
                 </button>
             </header>
 
-            <!-- LISTA FAQ -->
             <div class="faq-list">
 
-                <!-- PREGUNTA 1 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <i class="fas fa-circle-question question-icon"></i>
-                        <h3>¿Cómo reservar una cita?</h3>
+                        <div class="q-title">
+                            <i class="fas fa-circle-question question-icon"></i>
+                            <h3>¿Cómo reservar una cita?</h3>
+                        </div>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
@@ -52,11 +123,12 @@
                     </div>
                 </div>
 
-                <!-- PREGUNTA 2 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <i class="fas fa-circle-question question-icon"></i>
-                        <h3>¿Qué servicios ofrece la clínica?</h3>
+                        <div class="q-title">
+                            <i class="fas fa-circle-question question-icon"></i>
+                            <h3>¿Qué servicios ofrece la clínica?</h3>
+                        </div>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
@@ -67,11 +139,12 @@
                     </div>
                 </div>
 
-                <!-- PREGUNTA 3 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <i class="fas fa-circle-question question-icon"></i>
-                        <h3>¿Cuál es el horario de atención?</h3>
+                        <div class="q-title">
+                            <i class="fas fa-circle-question question-icon"></i>
+                            <h3>¿Cuál es el horario de atención?</h3>
+                        </div>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
@@ -82,11 +155,12 @@
                     </div>
                 </div>
 
-                <!-- PREGUNTA 4 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <i class="fas fa-circle-question question-icon"></i>
-                        <h3>¿Aceptan seguros médicos?</h3>
+                        <div class="q-title">
+                            <i class="fas fa-circle-question question-icon"></i>
+                            <h3>¿Aceptan seguros médicos?</h3>
+                        </div>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
@@ -97,11 +171,12 @@
                     </div>
                 </div>
 
-                <!-- PREGUNTA 5 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <i class="fas fa-circle-question question-icon"></i>
-                        <h3>¿Cómo puedo cancelar o reprogramar una cita?</h3>
+                        <div class="q-title">
+                            <i class="fas fa-circle-question question-icon"></i>
+                            <h3>¿Cómo puedo cancelar o reprogramar una cita?</h3>
+                        </div>
                         <i class="fas fa-chevron-down toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
@@ -116,31 +191,27 @@
         </div>
     </div>
 
-    <!-- MODAL FORMULARIO -->
-    <div class="modal" id="questionModal">
-        <div class="modal-content">
+    <div class="modal hidden" id="questionModal"> <div class="modal-content">
 
-            <span class="close" id="closeModal">&times;</span>
-
-            <h2>Enviar una pregunta</h2>
+            <span class="close-modal" id="closeModal">&times;</span> <h2>Enviar una pregunta</h2>
 
             <form id="questionForm">
 
                 <div class="form-group">
                     <label for="name">Nombre</label>
-                    <input type="text" id="name" placeholder="Tu nombre">
+                    <input type="text" id="name" placeholder="Tu nombre" required>
                     <small class="error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" placeholder="correo@ejemplo.com">
+                    <input type="email" id="email" placeholder="correo@ejemplo.com" required>
                     <small class="error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="question">Pregunta</label>
-                    <textarea id="question" rows="4" placeholder="Escribe tu pregunta aquí..."></textarea>
+                    <textarea id="question" rows="4" placeholder="Escribe tu pregunta aquí..." required></textarea>
                     <small class="error"></small>
                 </div>
 
@@ -152,8 +223,46 @@
         </div>
     </div>
 
+    <div id="toast" class="toast hidden"></div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Nosotros</h4>
+                <ul>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Misión y Visión</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestro Blog</h4>
+                <ul>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Consejos</a></li>
+                    <li><a href="#">Autoexamínate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/clinicacentenariodelnorte"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@centenario_delnorte"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/faq.js"></script>
 
 </body>
-
 </html>
