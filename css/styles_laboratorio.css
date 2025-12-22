@@ -7,7 +7,6 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
 /*------- ENCABEZADO (HEADER) Y NAVEGACION -------*/
@@ -908,4 +907,5 @@ body.dark-mode img {
     font-size: 1.5rem;
     transition: transform 0.3s, background-color 0.3s;
 }
+
 
