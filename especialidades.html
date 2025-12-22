@@ -5,213 +5,168 @@
     <title>Especialidades Médicas | Centenario del Norte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
+    <link rel="stylesheet" href="css/faq.css">
+
     <link rel="stylesheet" href="css/especialidades.css">
 
-    <!-- ICONOS -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
-
-<!-- CLARO POR DEFECTO -->
 <body>
 
-<!-- ================= PARTICULAS ================= -->
-<div id="particles-bg"></div>
+<div id="particles-js"></div>
 
-<!-- ================= HEADER ================= -->
 <header class="header">
-    <div class="logo">
-        <i class="fa-solid fa-hospital"></i>
-        Centenario del Norte
-    </div>
+    <a href="index.html" class="logo-link">
+        <div class="logo">CLINICA<br><span class="color-sec">CENTENARIO DEL NORTE</span></div>
+    </a>
 
-    <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#" class="active">Especialidades</a>
-        <a href="#">Citas</a>
-        <a href="#">Contacto</a>
-    </nav>
-
-    <!-- BOTÓN TEMA -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-        🌙
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </button>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="#">Campañas ▾</a>
+                <ul class="submenu">
+                    <li><a href="campañas.html">Nuestras Campañas</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Servicios ▾</a>
+                <ul class="submenu">
+                    <li><a href="Servicios.html">Nuestros Servicios</a></li>
+                    <li><a href="agendar_cita.html">Agenda tu Cita</a></li>
+                    <li><a href="farmacia.html">Farmacia</a></li>
+                    <li><a href="Laboratorio.html">Laboratorio</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Especialidades ▾</a>
+                <ul class="submenu">
+                    <li><a href="especialidades.html">Nuestras Especialidades</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Staff Médico ▾</a>
+                <ul class="submenu">
+                    <li><a href="staff_medico.html">Nuestros Médicos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Nuestro Blog ▾</a>
+                <ul class="submenu">
+                    <li><a href="Blog.html">Página Blog</a></li>
+                </ul>
+            </li>
+            <li><a href="#">FAQ's ▾</a>
+                <ul class="submenu">
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <div class="user-profile-container">
+                <div class="user-icon" id="userIcon">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="user-popup" id="userPopup">
+                    <div class="popup-header">
+                        <p class="user-name">Juan Pérez</p>
+                        <p class="user-email">juan.perez@example.com</p>
+                    </div>
+                    <ul class="popup-menu">
+                        <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Mis Citas</a></li>
+                        <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
     <div class="hero-text">
         <h1>Especialidades Médicas</h1>
-        <p>
-            Atención médica especializada con tecnología moderna,
-            profesionales altamente capacitados y un enfoque humano
-            centrado en tu bienestar.
-        </p>
+        <p>Atención médica especializada con tecnología moderna, profesionales altamente capacitados y un enfoque humano centrado en tu bienestar.</p>
     </div>
-
     <div class="hero-icon">
         <i class="fa-solid fa-heart-pulse"></i>
     </div>
 </section>
 
-<!-- ================= ESPECIALIDADES ================= -->
 <section class="especialidades">
-
     <h2>Nuestras Especialidades</h2>
-    <p class="especialidades-sub">
-        Brindamos atención integral en diversas áreas médicas,
-        priorizando la calidad, seguridad y confianza.
-    </p>
+    <p class="especialidades-sub">Brindamos atención integral en diversas áreas médicas, priorizando la calidad, seguridad y confianza.</p>
 
-    <div class="grid">
-
-        <article class="card reveal" data-delay="0">
-            <div class="icon"><i class="fa-solid fa-heart"></i></div>
-            <h3>Cardiología</h3>
-            <p>Prevención y tratamiento de enfermedades del corazón.</p>
-            <button class="btn btn-vermas" data-especialidad="cardiologia">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="100">
-            <div class="icon"><i class="fa-solid fa-baby"></i></div>
-            <h3>Pediatría</h3>
-            <p>Atención médica integral para niños y adolescentes.</p>
-            <button class="btn btn-vermas" data-especialidad="pediatria">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="200">
-            <div class="icon"><i class="fa-solid fa-tooth"></i></div>
-            <h3>Odontología</h3>
-            <p>Salud y estética dental especializada.</p>
-            <button class="btn btn-vermas" data-especialidad="odontologia">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="300">
-            <div class="icon"><i class="fa-solid fa-brain"></i></div>
-            <h3>Psicología</h3>
-            <p>Bienestar emocional y salud mental.</p>
-            <button class="btn btn-vermas" data-especialidad="psicologia">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="400">
-            <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
-            <h3>Medicina General</h3>
-            <p>Atención primaria y control preventivo.</p>
-            <button class="btn btn-vermas" data-especialidad="medicina">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="500">
-            <div class="icon"><i class="fa-solid fa-hand-sparkles"></i></div>
-            <h3>Dermatología</h3>
-            <p>Cuidado integral de la piel, cabello y uñas.</p>
-            <button class="btn btn-vermas" data-especialidad="dermatologia">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="600">
-            <div class="icon"><i class="fa-solid fa-eye"></i></div>
-            <h3>Oftalmología</h3>
-            <p>Salud visual y diagnóstico oftalmológico.</p>
-            <button class="btn btn-vermas" data-especialidad="oftalmologia">
-                Ver más
-            </button>
-        </article>
-
-        <article class="card reveal" data-delay="700">
-            <div class="icon"><i class="fa-solid fa-lungs"></i></div>
-            <h3>Neumología</h3>
-            <p>Tratamiento de enfermedades respiratorias.</p>
-            <button class="btn btn-vermas" data-especialidad="neumologia">
-                Ver más
-            </button>
-        </article>
-
-    </div>
+    <div class="grid"></div>
 </section>
 
-<!-- ================= MODAL PROFESIONAL AVANZADO ================= -->
-<div id="modalOverlay" class="modal-overlay">
-
+<div id="modalOverlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
     <div class="modal-card">
-
-        <!-- CERRAR -->
-        <button id="modalClose" class="modal-close">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-        <!-- CABECERA -->
+        <button id="modalClose" class="modal-close" aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
         <div class="modal-header">
-
-            <div class="modal-icon-wrapper">
-                <div id="modalIcon" class="modal-icon"></div>
-            </div>
-
+            <div id="modalIcon" class="modal-icon"></div>
             <div class="modal-header-text">
                 <h3 id="modalTitle" class="modal-title"></h3>
-                <span class="modal-subtitle">
-                    Atención médica especializada
-                </span>
+                <span class="modal-subtitle">Atención médica especializada</span>
             </div>
-
         </div>
-
-        <!-- CONTENIDO -->
         <div class="modal-body">
-
             <p id="modalDescription" class="modal-description"></p>
-
             <div class="modal-section">
-                <h4>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Servicios y recomendaciones
-                </h4>
-
+                <h4><i class="fa-solid fa-circle-check"></i> Servicios y recomendaciones</h4>
                 <ul id="modalList" class="modal-list"></ul>
             </div>
-
         </div>
-
-        <!-- FOOTER -->
         <div class="modal-footer">
-
-            <button class="btn-secondary">
-                <i class="fa-solid fa-phone"></i>
-                Consultar
-            </button>
-
-            <button class="btn-primary">
-                <i class="fa-solid fa-calendar-check"></i>
-                Solicitar atención
-            </button>
-
+            <button class="btn-secondary"><i class="fa-solid fa-phone"></i> Consultar</button>
+            <button class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Solicitar atención</button>
         </div>
-
     </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-    <p>© 2025 Centenario del Norte — Todos los derechos reservados</p>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>Nosotros</h4>
+            <ul>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Misión y Visión</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Nuestro Blog</h4>
+            <ul>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Consejos</a></li>
+                <li><a href="#">Autoexamínate</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Información Legal</h4>
+            <ul>
+                <li><a href="#">Políticas de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1Bo4gejadn/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/clinicacentenariodelnorte"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@centenario_delnorte"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
 </footer>
 
-<!-- ================= SCRIPTS ================= -->
-
-<!-- PARTICLES -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-<!-- JS PRINCIPAL -->
 <script src="js/especialidades.js"></script>
 
 </body>
